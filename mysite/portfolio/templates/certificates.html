@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver's Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'certificates.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+</head>
+<body>
+<section class="header">
+    <nav>
+        <img src="{% static 'logo_weiss.png' %}" alt="">
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'certificates' %}">Certificates</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<div class="hero-text">
+    <h1>My Certificates</h1>
+</div>
+</section>
+
+<!-----Certificates Section------>
+<section class="certificates">
+    <div class="cer-row">
+        <div class="certificates-col">
+            <h2>Cambridge B2 First Certificate in English</h2>
+            <img src="{% static 'First_Certificate.JPG' %}" alt="Cambridge B2 First Certificate in English">            
+        </div>
+        <div class="certificates-col">
+            <h2>Vocational Maturity</h2>
+            <img src="{% static 'Berufsmaturitätszeugnis.JPG' %}" alt="Vocational Maturity Certificate">
+        </div>
+    </div>
+</section>
+
+<!-----Footer Section------>
+<section class="footer">
+    <div class="icons">
+        <a href="https://www.instagram.com/_oliverpejic_/" target="_blank">
+            <i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/Kroli99" target="_blank">
+            <i class="fa fa-github"></i></a>
+    </div>
+    <p>Made by Oliver Pejic</p>
+</section>
+
+<!-----JavaScript for Toggle Menu------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+    
+</body>
+</html>

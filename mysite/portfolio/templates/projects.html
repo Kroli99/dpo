@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver's Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projects.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+</head>
+<body>
+<section class="header">
+    <nav>
+        <img src="{% static 'logo_weiss.png' %}" alt="">
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'certificates' %}">Certificates</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<div class="hero-text">
+    <h1>Projects</h1>
+</div>
+</section>
+
+<!-----Projects Section------>
+<section class="projects">
+    <div class="pro-row">
+        <div class="projects-col">
+            <img src="{% static 'imdb.jpg' %}" alt="">
+            <h3>Web Scraping IMDB Top 1000 Movies</h3>
+            <p>For my first project, I delved into the realm of data collection through web scraping. I developed a web scraper in Python, leveraging 
+                the capabilities of Selenium and Fake UserAgent libraries. This tool is intricately designed to extract and parse data from IMDB's 
+                top 1000 rated movies. It captures an array of movie details, including ranks, titles, release years, ratings, durations, genres, 
+                directors, and star casts. <br><br>
+                This project was not just about data extraction but also about overcoming common web scraping obstacles such as bot detection and handling 
+                proxies. The data acquired is neatly organized into lists and subsequently transformed into a pandas DataFrame, facilitating effortless 
+                analysis and data manipulation. <br><br>
+                This venture into web scraping showcases the critical skill of collecting data in the absence of APIs and sets a solid foundation for anyone 
+                keen on the art of data gathering and analytics. It epitomizes the intersection of technical skill and creative problem-solving in data science.
+            </p>
+        </div>
+        <div class="projects-col">
+            <img src="{% static 'wettermonitor.jpg' %}" alt="">
+            <h3>Weather Monitor for Watersports Enthusiasts</h3>
+            <p>The Weather Monitor project is an innovative solution designed to cater to the needs of watersports enthusiasts. This sophisticated 
+                system aggregates real-time weather data from various weather stations, offering a user-friendly dashboard for easy visualization. 
+                The primary aim is to assist watersports aficionados in making informed decisions about when to safely engage in their activities on the water. <br><br>
+                One of the key features of the system is its user-friendly dashboard, which displays the data in an intuitive format, accessible via any device 
+                connected to the club's network. This allows sailors and club officials to check the current weather conditions at a glance, from anywhere at any 
+                time. <br><br>
+                The implementation of this weather monitoring system stands as a testament to our commitment to leveraging technology for safety and excellence 
+                in sailing sports. It represents a significant step forward in the club's infrastructure, positioning it at the forefront of technological integration 
+                in sailing.
+            </p>
+        </div>
+        <div class="projects-col">
+            <img src="{% static 'steinschlag.jpeg' %}" alt="">
+            <h3>Rockfall Risk Evaluation</h3>
+            <p>As part of a team project during my studies at the FHNW for BSc in Data Science, we embarked on a critical assessment of the risk 
+                of fatalities on the Cantonal Road B28 due to rockfall. We scrutinized data collected from a road in Schiers, GR, which runs dangerously 
+                close to a steep cliff prone to frequent rockfall. The existing safety nets, designed to catch falling rocks, were aged and no longer met 
+                safety standards, posing a potential failure within the next year that could lead to severe accidents or even fatalities. 
+                <br><br>Our objective was to calculate the probability of fatalities until the nets were replaced within a year. By law, the road would have to 
+                be closed if the probability of a fatality exceeded 0.0001 per year.<br><br>
+                We employed a methodological approach that included explorative data analysis (EDA), data cleaning, visualization, and probability calculations. 
+                Our findings, after conducting a Monte Carlo simulation, revealed a fatality probability of 0.000212 per year, which surpasses the legal threshold. 
+                Based on our results, we strongly recommended closing the road to prevent loss of life and suggested identifying alternative routes to divert traffic 
+                and informing the public about the closure and planned alternatives through an information campaign. <br><br>
+                The project not only showcased our ability to handle large datasets and apply statistical models but also emphasized the importance of data science in 
+                making informed decisions that can save lives.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-----Footer Section------>
+<section class="footer">
+    <div class="icons">
+        <a href="https://www.instagram.com/_oliverpejic_/" target="_blank">
+            <i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/Kroli99" target="_blank">
+            <i class="fa fa-github"></i></a>
+    </div>
+    <p>Made by Oliver Pejic</p>
+</section>
+
+<!-----JavaScript for Toggle Menu------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+    
+</body>
+</html>
