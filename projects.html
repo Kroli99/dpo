@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oliver's Portfolio</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'projects.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +15,7 @@
 <body>
 <section class="header">
     <nav>
-        <img src="{% static 'logo_weiss.png' %}" alt="">
+        <img src="bilder/logo_weiss.png" alt="">
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -38,7 +37,7 @@
 <section class="projects">
     <div class="pro-row">
         <div class="projects-col">
-            <img src="{% static 'imdb.jpg' %}" alt="">
+            <img src="bilder/imdb.jpg" alt="">
             <h3>Web Scraping IMDB Top 1000 Movies</h3>
             <p>For my first project, I delved into the realm of data collection through web scraping. I developed a web scraper in Python, leveraging 
                 the capabilities of Selenium and Fake UserAgent libraries. This tool is intricately designed to extract and parse data from IMDB's 
@@ -52,7 +51,7 @@
             </p>
         </div>
         <div class="projects-col">
-            <img src="{% static 'wettermonitor.jpg' %}" alt="">
+            <img src="bilder/wettermonitor.jpg" alt="">
             <h3>Weather Monitor for Watersports Enthusiasts</h3>
             <p>The Weather Monitor project is an innovative solution designed to cater to the needs of watersports enthusiasts. This sophisticated 
                 system aggregates real-time weather data from various weather stations, offering a user-friendly dashboard for easy visualization. 
@@ -66,7 +65,7 @@
             </p>
         </div>
         <div class="projects-col">
-            <img src="{% static 'steinschlag.jpeg' %}" alt="">
+            <img src="bilder/steinschlag.jpeg" alt="">
             <h3>Rockfall Risk Evaluation</h3>
             <p>As part of a team project during my studies at the FHNW for BSc in Data Science, we embarked on a critical assessment of the risk 
                 of fatalities on the Cantonal Road B28 due to rockfall. We scrutinized data collected from a road in Schiers, GR, which runs dangerously 
