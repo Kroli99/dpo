@@ -130,12 +130,13 @@ nav .fa{
     max-width: 80%; /* Adjust this value to suit your design preference */
     margin: 0 auto; /* This centers the paragraph text within the .about-col */
     padding: 0 20px; /* Add padding if you want some space on the sides */
-    margin-top: 5%;
+    font-size: large;
 }
 .about-col h3{
+    font-size: 36px;
     max-width: 80%;
-    margin: 20px auto; /* Centers the h3 and adds space above and below */
-    text-align: center; /* Optional: if you want the heading to be centered */
+    margin: 5px auto; /* Centers the h3 and adds space above and below */
+    text-align: left; /* Optional: if you want the heading to be centered */
     padding: 0 20px; /* Add padding if you want some space on the sides */
 }
 
@@ -144,6 +145,56 @@ nav .fa{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/*----- Blog Section -----*/
+.blog {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333; /* oder eine andere Farbe Ihrer Wahl */
+    font-weight: 600;
+}
+
+.blog-post {
+    margin-bottom: 40px;
+    background-color: #f8f8f8; /* leichter Hintergrund für jeden Post */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* leichter Schatten für Tiefe */
+}
+
+.blog-post h3 {
+    color: #333; /* oder eine andere Farbe Ihrer Wahl */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.blog-date {
+    color: #666; /* Grauton für das Datum */
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    text-align: left;
+    font-size: 16px;
+    color: #444; /* dunklerer Grauton für den Text */
+    line-height: 1.6;
+}
+
+@media(max-width: 700px) {
+    .blog {
+        width: 90%;
+    }
+}
+
+
 
 /*----- Footer -----*/
 .footer{
